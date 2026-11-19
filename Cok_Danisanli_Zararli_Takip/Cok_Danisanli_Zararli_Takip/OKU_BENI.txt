@@ -1,0 +1,27 @@
+COK DANISANLI ZARARLI TAKIP - ILK SURUM
+
+1) Python 3.9+ kurulu olmalidir. Windows komut satirinda 'py -3 --version' ile kontrol edin.
+2) danisanlar.csv dosyasini Excel'de acin. Her danisan icin yeni satir girin.
+   danisan_id: benzersiz, Turkce karakter ve bosluk kullanmadan.
+   danisan_adi, il, ilce: bilgilendirme alanlari.
+   enlem ve boylam: tarla koordinatlari (ondalik derece).
+   aktif: 1 = gunluk guncelle; 0 = guncelleme.
+   CSV'yi UTF-8 biciminde kaydedin. Excel koordinatlari degistirmesin.
+3) GUNCELLE.bat dosyasini bir kez calistirin. Dosyalar Danisan_Dosyalari klasorunde olusur.
+4) Her gun otomatik calismasi icin GOREV_KUR.bat dosyasini calistirin.
+   Windows gorevi 08:30'da tetikler; bilgisayar kapaliysa calismaz.
+   Gerekirse Windows Gorev Zamanlayici'dan 'Gorev kacirildiysa en kisa surede calistir' secin.
+5) Hata ve islem kayitlari guncelleme.log dosyasinda tutulur.
+
+ONEMLI:
+- Her danisanin ayri Excel dosyasi vardir; ayni danisan_id ile sonraki calistirmada guncellenir.
+- Her danisanin sablon B5 baslangic tarihi aynidir; farkli ekim/biyolojik baslangiclar
+  gerekiyorsa olusturulan danisan Excel dosyasindaki ilgili sayfanin B5 hucresini degistirin.
+- 150 gun siniri asilirsa sistem ilgili danisani atlar, dosyasini degistirmez.
+- Excel dosyalarini guncelleme sirasinda kapali tutun.
+- Kaynak Open-Meteo arsiv gunluk min/max verileridir; veriler model/yeniden analiz
+  niteliginde olabilir, yerel istasyon olcumuyle birebir ayni olmak zorunda degildir.
+- Zararlilarda biyolojik esikler ve mucadele kararlarini arazi gozlemleriyle dogrulayin.
+- Bilgisayar kapaliyken surekli otomasyon icin bulut sunucuya tasima gerekir.
+- Ornek danisan aktif=0 olarak birakilmistir. Gercek kayit girip aktif=1 yapin.
+- Orijinal yuklenen dosyalar degistirilmemistir.
